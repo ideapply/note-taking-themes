@@ -1,13 +1,13 @@
 /* 修改自 https://github.com/felixjamestin/felixjamestin.github.io */
-
-@font-face { font-family: "CangErJinKai01-9128-W03-4"; src: url('https://raw.githubusercontent.com/ideapply/Fonts/main/CangErJinKai01-9128-W03-4.otf')
-  format("opentype")
-  }
+@font-face { 
+  font-family: "CangErJinKai01-9128-W03-4"; 
+  src: url('https://raw.githubusercontent.com/ideapply/Fonts/main/CangErJinKai01-9128-W03-4.otf') format("opentype");
+}
 
 :root {
   --font-size: 14px;
-  --header-font: "Lato", sans-serif;
-  --body-font: "Open Sans", sans-serif;
+  --header-font: "CangErJinKai01-9128-W03-4", sans-serif;
+  --body-font: "CangErJinKai01-9128-W03-4", sans-serif;
   --code-font: "IBM Plex Mono", monospace;
   --max-text-width: "42em"; /* Eg "640px", "520px, "42em", etc */
   --sidebar-default-opacity: 0.15; /* Change this to 1 if you want the sidebar to always be visible in desktop view */
@@ -73,8 +73,8 @@
 
 :root .rm-dark-theme {
   --font-size: 14px;
-  --header-font: "Lato", sans-serif;
-  --body-font: "Open Sans", sans-serif;
+  --header-font: "CangErJinKai01-9128-W03-4", sans-serif;
+  --body-font: "CangErJinKai01-9128-W03-4", sans-serif;
   --code-font: "IBM Plex Mono", monospace;
   --max-text-width: "42em"; /* Eg "640px", "520px, "42em", etc */
   --sidebar-default-opacity: 1; /* Sidebar more visible in light theme */
@@ -83,60 +83,61 @@
   --outer-indent-ruler-opacity: 1;
   --inner-indent-ruler-opacity: 1;
   /* Code Colors */
-  --code-bg-color: #f7f7f7;
-  --cmt-comment-color: rgb(87, 92, 102);
-  --cmt-def-color: rgb(149, 104, 32);
-  --cmt-keyword-color: rgb(21, 101, 31);
-  --cmt-propertyName-color: rgb(32, 64, 162);
-  --cmt-typeName-color: rgb(170, 20, 20);
+  --code-bg-color: #fdf6e3; /* Solarized Light background */
+  --cmt-comment-color: #93a1a1; /* Muted cyan for comments */
+  --cmt-def-color: #b58900; /* Solarized yellow for definitions */
+  --cmt-keyword-color: #268bd2; /* Solarized blue for keywords */
+  --cmt-propertyName-color: #859900; /* Solarized green for property names */
+  --cmt-typeName-color: #dc322f; /* Solarized red for type names */
   --cmt-variableName-color: var(--cmt-typeName-color);
-  --cmt-number-color: rgb(204, 114, 51);
+  --cmt-number-color: #d33682; /* Solarized magenta for numbers */
   --cmt-atom-color: var(--cmt-number-color);
-  --cmt-string-color: var(--cmt-keyword-color);
-  --cmt-string2-color: var(--cmt-keyword-color);
+  --cmt-string-color: #2aa198; /* Solarized cyan for strings */
+  --cmt-string2-color: var(--cmt-string-color);
   --cmt-literal-color: var(--cmt-number-color);
-  --cmt-labelName-color: rgb(26, 102, 127);
+  --cmt-labelName-color: #6c71c4; /* Solarized violet for labels */
   --cmt-i-color: var(--cmt-number-color);
   /* Light Theme Colors */
-  --body-background-color: #ffffff;
-  --popup-background-color: var(--body-background-color);
-  --main-background-color: #f0f0f0;
-  --search-background-color: #f0f0f0;
-  --block-highlight-accent-color: #e0e0e0;
-  --body-text-color: #222222;
-  --black-text: #000000;
-  --empty-text-color: #606060;
-  --sidebar-base-text-color: #606060;
-  --title-accent-color: rgb(51, 131, 72);
+  --body-background-color: #fdf6e3; /* Solarized Light background */
+  --popup-background-color: #eee8d5; /* Slightly darker for popups */
+  --main-background-color: #fdf6e3; /* Consistent with body */
+  --search-background-color: #eee8d5; /* Muted background for search */
+  --block-highlight-accent-color: #b3b9b8; /* Light grey highlight */
+  --body-text-color: #586e75; /* Solarized base0 for body text */
+  --black-text: #073642; /* Solarized base02 for headers and strong text */
+  --empty-text-color: #839496; /* Solarized base1 for muted text */
+  --sidebar-base-text-color: #586e75; /* Solarized base00 for sidebar text */
+  --title-accent-color: #268bd2; /* Solarized blue for title accents */
   --primary-accent-color: var(--title-accent-color);
-  --secondary-accent-color: #a37ff9;
-  --secondary-accent-extra-color: rgb(153, 110, 247);
-  --sidebar-text-hover-color: rgb(34, 34, 34);
-  --tertiary-accent-color: #4df2ef;
-  --tertiary-accent-extra-color: #30ba6b;
-  --highlight-text-color: var(--search-background-color);
-  --highlight-background-color: var(--secondary-accent-extra-color);
-  --sidebar-container-title-color: rgba(87, 92, 102, 0.1);
-  --border-color: rgba(0, 0, 0, 0.08);
-  --subtle-border-color: rgba(0, 0, 0, 0.5);
-  --search-border-color: rgba(0, 0, 0, 0.08);
-  --reference-item-background: rgba(0, 0, 0, 0.1);
-  --brackets-color: rgba(0, 0, 0, 0.25);
-  --box-shadow-color: #e0e0e094;
-  --zoom-path-item-color: #2a4e71;
+  --secondary-accent-color: #d33682; /* Solarized magenta for secondary accents */
+  --secondary-accent-extra-color: #6c71c4; /* Solarized violet for additional accents */
+  --sidebar-text-hover-color: #073642; /* Darker hover color for sidebar items */
+  --tertiary-accent-color: #2aa198; /* Solarized cyan for tertiary accents */
+  --tertiary-accent-extra-color: #859900; /* Solarized green for extra accents */
+  --highlight-text-color: #073642; /* Darker text on highlighted areas */
+  --highlight-background-color: var(--secondary-accent-extra-color); /* Highlight with violet background */
+  --sidebar-container-title-color: rgba(147, 161, 161, 0.15); /* Muted for contrast */
+  --border-color: rgba(0, 43, 54, 0.2); /* Slightly darker borders */
+  --subtle-border-color: rgba(0, 43, 54, 0.4); /* More noticeable borders */
+  --search-border-color: rgba(0, 43, 54, 0.3); /* Visible border for search */
+  --reference-item-background: rgba(0, 43, 54, 0.1); /* Subtle reference background */
+  --brackets-color: rgba(0, 43, 54, 0.35); /* More prominent brackets */
+  --box-shadow-color: #eee8d5; /* Subtle box shadows */
+  --zoom-path-item-color: #93a1a1; /* Muted cyan for zoom path */
   /* Custom Data Tags and Pages */
-  --inbox-color: #58a58e;
-  --later-color: #58a5ff;
+  --inbox-color: #859900; /* Solarized green */
+  --later-color: #268bd2; /* Solarized blue */
   /* Selected Highlight */
-  --highlight-color: #f3f0fa;
+  --highlight-color: #eee8d5; /* Soft highlight */
   /* Template popper */
-  --template-popper-color: #82848a;
-  /* DONE Text Color*/
+  --template-popper-color: #839496; /* Muted grey for pop-ups */
+  /* DONE Text Color */
   --todo-done-color: var(--empty-text-color);
   /* Block Reference */
-  --block-reference-background-color: rgba(139, 208, 180, 0.2);
-  --block-reference-background-hover-color: rgba(139, 208, 180, 0.4);
+  --block-reference-background-color: rgba(133, 153, 0, 0.2); /* Light green tint */
+  --block-reference-background-hover-color: rgba(133, 153, 0, 0.4); /* Stronger hover effect */
 }
+
 
 /* -------------------------- */
 /* Custom Data Tags and Pages */
